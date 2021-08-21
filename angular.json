@@ -103,6 +103,20 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://vaniscotte-geoffrey.github.io/netflex/",
+            "branch": "prod"
+          }
+        },
+        "deploy:dev": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://vaniscotte-geoffrey.github.io/netflex/",
+            "branch": "dev-prod"
+          }
         }
       }
     }
