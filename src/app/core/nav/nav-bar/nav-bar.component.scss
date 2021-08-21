@@ -1,0 +1,47 @@
+.nav-bar {
+  width: calc(100% - 2 * 2rem);
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+
+  background: linear-gradient(#000000, #12021F);
+
+  .brand-logo {
+    width: 6rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .menu-list {
+    width: 100%;
+    flex: 2;
+    display: flex;
+    gap: 2rem;
+
+    .menu-item {
+      list-style: none;
+      text-decoration: none;
+      transition: opacity 200ms ease;
+      color: white;
+      outline: none;
+      &:hover:not(.active), &:focus:not(.active) {
+        opacity: 0.5;
+      }
+    }
+    .menu-item.active {
+      font-weight: bold;
+    }
+  }
+
+  .user-logo {
+    height: 70%;
+    transition: transform 250ms;
+    &:hover {
+      transform: rotateY(360deg) scale(1.1);
+    }
+  }
+}
