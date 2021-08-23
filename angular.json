@@ -108,20 +108,10 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "baseHref": "https://vaniscotte-geoffrey.github.io/netflex/",
-            "branch": "prod",
             "name": "CI Deploy",
             "email": "vaniscotte.geoffrey@hotmail.com",
-            "repo": "https://github.com/vaniscotte-geoffrey/netflex.git"
-          }
-        },
-        "deploy:dev": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "baseHref": "https://vaniscotte-geoffrey.github.io/netflex/",
-            "branch": "dev-prod",
-            "name": "CI Deploy",
-            "email": "vaniscotte.geoffrey@hotmail.com",
-            "repo": "https://github.com/vaniscotte-geoffrey/netflex.git"
+            "repo": "https://github.com/vaniscotte-geoffrey/netflex.git",
+            "branch": "dev-prod"
           }
         }
       }
