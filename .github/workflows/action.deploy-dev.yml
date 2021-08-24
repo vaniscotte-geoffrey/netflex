@@ -1,17 +1,24 @@
-name: Test
+name: Deploy Dev
 on:
   push:
     branches:
       - dev
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Deploy on gh pages
-        uses: actions/checkout@v2
-      - name: Use Node.js 16.5
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.5
-      - run: npm ci
-      - run: npm run ng deploy
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Use Node.js 16.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 16.x
+
+    - name: Prepare and deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        npm install
+        npm run ng deploy
