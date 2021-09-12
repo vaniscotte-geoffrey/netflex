@@ -1,7 +1,13 @@
+@use 'app/themes/themes.scss' as theme;
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@include theme.apply-default-theme;
+
 
 body {
   margin: 0;
   overflow-y: hidden;
   font-family: 'Roboto';
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
